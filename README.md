@@ -1,8 +1,9 @@
 # dataTools
 
-En la rama main, se encuentra el código del front del aplicativo, el cual fue desarrollado en Angular.
+En la rama main se encuentran 3 carpetas:
+1. Diagramas: Se encuentran los diagramas y documento de arquitectura.
+2. Front: se encuentra el código del front del aplicativo, el cual fue desarrollado en Angular. Para su ejecución, es importante tener node.js instalado. 
+3. Back: se encuentra el código del backen del aplicativo, el cual fue desarrollado en spring boot. 
 
-En la rama master, se encuentra el código del backen del aplicativo, el cual fue desarrollado en spring boot. 
 
-En la carpeta se encuentra el documento con información como atributos de calidad, supuestos, acuerdos de nivel de servicio y la estructra de cada una de las vistas diagramadas.
 
