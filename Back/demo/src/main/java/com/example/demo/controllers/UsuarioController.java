@@ -26,7 +26,7 @@ public class UsuarioController {
     // Cuando llega una petición tipo GET se ejecuta esta función
     @GetMapping()
     // Retorna todos los usuarios de tipo ArrayList
-    public ArrayList<UsuarioModel> obtenerUsusarios(){
+    public ArrayList<UsuarioModel> obtenerUsuarios(){
         return usuarioService.obtenerUsuarios();
     }
 
