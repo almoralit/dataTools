@@ -1,0 +1,85 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Usuario</h1>
+      <div class= "d-flex">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrar</button>  
+      </div>
+  </div>
+</nav>
+
+<table class="table mt-3">
+  <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre completo</th>
+          <th scope="col">Tipo documento</th>
+          <th scope="col">Documento</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Municipio</th>
+          <th scope="col">Rol</th>
+          <th scope="col">Acción</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor= "let row of usuarioData;let item=index">
+        <th scope="row">{{row.id}}</th>
+        <td>{{row.nombre_completo}}</td>
+        <td>{{row.tipo_doc}}</td>
+        <td>{{row.documento}}</td>
+        <td>{{row.telefono}}</td>
+        <td>{{row.direccion}}</td>
+        <td>{{row.municipio.nombre}}</td>
+        <td>{{row.rol.nombre_rol}}</td>
+        <td>
+            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-danger mx-3" type="button" (click)="deleteUsuario(row)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registrar usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form [formGroup]="formValue"> 
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre completo</label>
+                <input type="text" formControlName="nombres" class="form-control" id="inputNombres">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Tipo documento</label>
+              <input type="text" formControlName="tipo_Doc" class="form-control" id="inputDocumento">
+          </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Documento</label>
+                <input type="text" formControlName="documento" class="form-control" id="inputDocumento">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+                <input type="text" formControlName="telefono" class="form-control" id="inputTelefono">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Dirección</label>
+                <input type="text" formControlName="direccion" class="form-control" id="inputDireccion">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Rol</label>
+                <input type="text" formControlName="rol" class="form-control" id="inputRol">
+            </div>             
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" (click)="postUsuarioDetails()" class="btn btn-primary">Registrar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "empresa": "Datatools",
+      "vehiculo": "ABC123",
+      "conductor": "10184400"
+    },
+    {
+      "id": 3,
+      "empresa": "La Macarena",
+      "vehiculo": "DEF456",
+      "conductor": "10184400"
+    },
+    {
+      "id": 4,
+      "empresa": "Panamericana",
+      "vehiculo": "XYZ098",
+      "conductor": "1018400"
+    },
+    {
+      "id": 5,
+      "motor": "1",
+      "placa": "1",
+      "chasis": "1",
+      "modelo": "1",
+      "pasajeros_sentados": "",
+      "pasajeros_pie": "",
+      "peso_bruto": "",
+      "peso_seco": "",
+      "puertas": "2",
+      "marca": "2",
+      "línea": ""
+    },
+    {
+      "id": 6,
+      "documento": "10101",
+      "nombres": "angie",
+      "direccion": "101010",
+      "telefono": "1010101",
+      "rol": "1"
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9,
+      "tipo_Doc": "",
+      "num_Doc": "",
+      "nombre": "",
+      "direccion": "",
+      "telefono": "",
+      "area": ""
+    },
+    {
+      "id": 10,
+      "tipo_Doc": "",
+      "nombre": "2",
+      "direccion": "2",
+      "telefono": "1",
+      "area": "1"
+    },
+    {
+      "id": 11,
+      "documento": "persona",
+      "nombres": "PErsona",
+      "direccion": "persona",
+      "telefono": "persona",
+      "rol": "persona"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

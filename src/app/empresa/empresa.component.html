@@ -1,0 +1,84 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Empresa</h1>
+      <div class= "d-flex">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrar</button>  
+      </div>
+  </div>
+</nav>
+
+<table class="table mt-3">
+  <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Tipo documento</th>
+          <th scope="col">Número de documento </th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Area</th>
+          <th scope="col">Acción</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th scope="col">1</th>
+        <th scope="col">NIT</th>
+        <th scope="col">123434</th>
+        <th scope="col">DataTools</th>
+        <th scope="col">Av Americas Carrera 30</th>
+        <th scope="col">4555555</th>
+        <th scope="col">1</th>
+        <td>
+            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-danger mx-3">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registrar empresa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form [formGroup]="formValue"> 
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Tipo de documento</label>
+                <input type="text" formControlName="tipoDoc" class="form-control" id="inputTipoDoc">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Número de documento</label>
+                <input type="text" formControlName="numDoc" class="form-control" id="inputNumDoc">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                <input type="text" formControlName="nombre" class="form-control" id="inputNombre">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Dirección</label>
+                <input type="text" formControlName="direccion" class="form-control" id="inputDireccion">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+                <input type="text" formControlName="telefono" class="form-control" id="inputTelefono">
+            </div>  
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Área</label>
+                <input type="text" formControlName="area" class="form-control" id="inputArea">
+            </div>                         
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" (click)="postEmpresaDetails()" class="btn btn-primary">Registrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

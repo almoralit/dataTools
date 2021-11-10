@@ -1,0 +1,120 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h1 style="color: aliceblue;">Vehículo</h1>
+      <div class= "d-flex">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrar</button>  
+      </div>
+  </div>
+</nav>
+
+<table class="table mt-3">
+  <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Motor</th>
+          <th scope="col">Placa</th>
+          <th scope="col">Chasis</th>
+          <th scope="col">Fecha matricula</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Pasajeros sentados</th>
+          <th scope="col">Pasajeros de pie</th>
+          <th scope="col">Peso bruto</th>
+          <th scope="col">Peso seco</th>
+          <th scope="col">Puertas</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Línea</th>
+          <th scope="col">Acción</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th scope="col">1</th>
+        <th scope="col">3000</th>
+        <th scope="col">ABC123</th>
+        <th scope="col">456</th>
+        <th scope="col">01/01/2021</th>
+        <th scope="col">1990</th>
+        <th scope="col">10</th>
+        <th scope="col">10</th>
+        <th scope="col">100</th>
+        <th scope="col">90</th>
+        <th scope="col">5</th>
+        <th scope="col">Chevrolet</th>
+        <th scope="col">Ejecutivo</th>
+        <th scope="col">Acción</th>
+        <td>
+            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-danger mx-3">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registrar vehículo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form [formGroup]="formValue"> 
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Motor</label>
+                <input type="text" formControlName="motor" class="form-control" id="inputMotor">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Placa</label>
+                <input type="text" formControlName="placa" class="form-control" id="inputPlaca">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Chasis</label>
+                <input type="text" formControlName="chasis" class="form-control" id="inputChasis">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Fecha matricula</label>
+                <input type="text" formControlName="fecha_Matricula" class="form-control" id="inputFechaMatricula">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Modelo</label>
+                <input type="text" formControlName="modelo" class="form-control" id="inputModelo">
+            </div>  
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Pasajeros sentados</label>
+                <input type="text" formControlName="pasajeros_Sentados" class="form-control" id="inputPasaerosSentados">
+            </div>     
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Pasajeros de pie</label>
+                <input type="text" formControlName="pasajerosPie" class="form-control" id="inputPasajerosPie">
+            </div>   
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Peso bruto</label>
+                <input type="text" formControlName="pesoBruto" class="form-control" id="inputPesoBruto">
+            </div> 
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Peso seco</label>
+                <input type="text" formControlName="pesoSeco" class="form-control" id="inputPesoSeco">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Puertas</label>
+                <input type="text" formControlName="puertas" class="form-control" id="inputPuertas">
+            </div>    
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Marca</label>
+                <input type="text" formControlName="marca" class="form-control" id="inputMarca">
+            </div> 
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Línea</label>
+                <input type="text" formControlName="linea" class="form-control" id="inputLinea">
+            </div>                
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" (click)="postVehiculoDetails()" class="btn btn-primary">Registrar</button>
+      </div>
+    </div>
+  </div>
+</div>
